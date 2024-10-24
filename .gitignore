@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Environment Variables
+.env
+
+# MySQL Workbench Config Files
+*.sql
+*.log
+
+# Virtual Environment
+venv/
+
+# OS generated files
+.DS_Store
+*.swp

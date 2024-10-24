@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Course Registration Data</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Course Registration Details</h1>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Program</th>
+                        <th>Email</th>
+                        <th>Student Email</th>
+                        <th>Current Level</th>
+                        <th>Applying Level</th>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Type</th>
+                        <th>Fee Waiver</th>
+                        <th>Final Fee</th>
+                        <th>Term Code</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in data %}
+                    <tr>
+                        <td>{{ item.program }}</td>           <!-- Program -->
+                        <td>{{ item.email }}</td>             <!-- Email -->
+                        <td>{{ item.student_email }}</td>     <!-- Student Email -->
+                        <td>{{ item.current_level }}</td>     <!-- Current Level -->
+                        <td>{{ item.applying_level }}</td>    <!-- Applying Level -->
+                        <td>{{ item.course_code }}</td>       <!-- Course Code -->
+                        <td>{{ item.course_name }}</td>       <!-- Course Name -->
+                        <td>{{ item.type }}</td>              <!-- Type -->
+                        <td>{{ item.fee_waiver }}</td>        <!-- Fee Waiver -->
+                        <td>{{ item.final_fee }}</td>         <!-- Final Fee -->
+                        <td>{{ item.term_code }}</td>         <!-- Term Code -->
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

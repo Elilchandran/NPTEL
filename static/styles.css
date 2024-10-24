@@ -1,0 +1,80 @@
+/* Base styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('../static/background4.jpg'); /* Path to the background image */ /* Path to the background image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-attachment: fixed; /* Keeps the image fixed during scrolling */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styling */
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(164, 205, 249, 0.9); /* Semi-transparent background to make text more readable */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Heading styling */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2e1b3b;
+    margin-bottom: 30px;
+}
+
+/* Table wrapper for responsiveness */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* Header row styling */
+thead {
+    background-color: #7d3c9b;
+    color: white;
+}
+
+/* Table header and data cell styling */
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 2px solid #111010;
+}
+
+/* Zebra striping for table rows */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect for table rows */
+tbody tr:hover {
+    background-color: #eee9ef;
+    cursor: pointer;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 780px) {
+    th, td {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
