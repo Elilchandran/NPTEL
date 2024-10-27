@@ -1,4 +1,4 @@
-# Course Registration Data Web Application
+# NPTEL Course Registration Data Web Application
 
 This project is about web application built using Flask to fetch and display course registration data from a MySQL database. It features a clean and responsive design, showcasing important details about course registrations.
 
@@ -70,15 +70,12 @@ This project is about web application built using Flask to fetch and display cou
 - Access the application: Open your web browser and navigate to **http://127.0.0.1:5000**.
 
 
-
-
-
-## ER Diagram:
-- **Project Structure:** Included an `er_diagram/` section for your ER diagram as part of the project structure.
-
 ## Enhancement:
 - Deploy the web application using Render for better performance and scalability.
 - Utilize AWS services to improve data management and add features like notifications for course updates.
 
+## ER Diagram:
+- **Project Structure:** Included an `er_diagram/` section for your ER diagram as part of the project structure.
 
 
+<img src="https://github.com/Elilchandran/NPTEL/blob/master/er_diagram/ER_diagram.png?raw=true" alt="ER Diagram" width="500" style="display: block; margin: auto;">
