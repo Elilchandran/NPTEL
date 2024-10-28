@@ -1,32 +1,22 @@
 from flask import Flask, render_template
-from app.queries import fetch_course_registration_data
-
+from app.queries import fetch_course_registration_data, fetch_account_data, fetch_application_data, fetch_term_course_registration_data, fetch_course_data
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    df = fetch_course_registration_data()
-    data = df.to_dict(orient='records') if df is not None else []
-    return render_template('index.html', data=data)
+    course_data = fetch_course_registration_data()
+    account_data = fetch_account_data()
+    application_data = fetch_application_data()
+    term_course_registration_data = fetch_term_course_registration_data()
+    course_info_data = fetch_course_data()
+
+    return render_template('index.html', 
+                           course_data=course_data.to_dict(orient='records') if course_data is not None else [],
+                           account_data=account_data.to_dict(orient='records') if account_data is not None else [],
+                           application_data=application_data.to_dict(orient='records') if application_data is not None else [],
+                           term_course_registration_data=term_course_registration_data.to_dict(orient='records') if term_course_registration_data is not None else [],
+                           course_info_data=course_info_data.to_dict(orient='records') if course_info_data is not None else [])
 
 if __name__ == "__main__":
-    app.run(debug=True)
-
-# from flask import Flask, render_template
-# from app.queries import fetch_course_registration_data
-# import os
-
-
-# app = Flask(__name__)
-
-# @app.route('/')
-# def index():
-#     df = fetch_course_registration_data()
-#     data = df.to_dict(orient='records') if df is not None else []
-#     return render_template('index.html', data=data)
-
-# if __name__ == "__main__":
-#     app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 10000)), debug=True)
-
-
+    app.run(debug=True)  

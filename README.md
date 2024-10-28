@@ -68,6 +68,8 @@ This project is about web application built using Flask to fetch and display cou
 - python main.py
 
 - Access the application: Open your web browser and navigate to **http://127.0.0.1:5000**.
+  
+- It contains/ **Display the individual table details** of Account, Application, TermCourseRegistration, course along with Course Registration Data Details from MySql (database)
 
 
 

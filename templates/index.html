@@ -9,6 +9,8 @@
 <body>
     <div class="container">
         <h1>Course Registration Details</h1>
+        
+        <h2>Course Registration Data</h2>
         <div class="table-wrapper">
             <table>
                 <thead>
@@ -27,19 +29,123 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% for item in data %}
+                    {% for item in course_data %}
                     <tr>
-                        <td>{{ item.program }}</td>           <!-- Program -->
-                        <td>{{ item.email }}</td>             <!-- Email -->
-                        <td>{{ item.student_email }}</td>     <!-- Student Email -->
-                        <td>{{ item.current_level }}</td>     <!-- Current Level -->
-                        <td>{{ item.applying_level }}</td>    <!-- Applying Level -->
-                        <td>{{ item.course_code }}</td>       <!-- Course Code -->
-                        <td>{{ item.course_name }}</td>       <!-- Course Name -->
-                        <td>{{ item.type }}</td>              <!-- Type -->
-                        <td>{{ item.fee_waiver }}</td>        <!-- Fee Waiver -->
-                        <td>{{ item.final_fee }}</td>         <!-- Final Fee -->
-                        <td>{{ item.term_code }}</td>         <!-- Term Code -->
+                        <td>{{ item.program }}</td>
+                        <td>{{ item.email }}</td>
+                        <td>{{ item.student_email }}</td>
+                        <td>{{ item.current_level }}</td>
+                        <td>{{ item.applying_level }}</td>
+                        <td>{{ item.course_code }}</td>
+                        <td>{{ item.course_name }}</td>
+                        <td>{{ item.type }}</td>
+                        <td>{{ item.fee_waiver }}</td>
+                        <td>{{ item.final_fee }}</td>
+                        <td>{{ item.term_code }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Account Details</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Account_ID</th>
+                        <th>Name</th>
+                        <th>DOB</th>
+                        <th>Email</th>
+                        <th>Student Email</th>
+                        <th>Fee Waiver</th>
+                        <th>Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in account_data %}
+                    <tr>
+                        <td>{{ item.account_id }}</td>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.dob }}</td>
+                        <td>{{ item.email }}</td>
+                        <td>{{ item.student_email }}</td>
+                        <td>{{ item.fee_waiver }}</td>
+                        <td>{{ item.level }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Application Details</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Term Code</th>
+                        <th>Student Email</th>
+                        <th>Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in application_data %}
+                    <tr>
+                        <td>{{ item.id }}</td>
+                        <td>{{ item.term_code }}</td>
+                        <td>{{ item.student_email }}</td>
+                        <td>{{ item.level }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Term Course Registration Details</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Applying Level</th>
+                        <th>Term Code</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in term_course_registration_data %}
+                    <tr>
+                        <td>{{ item.applying_level }}</td>
+                        <td>{{ item.term_code }}</td>
+                        
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Course Details</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Full Fee</th>
+                        <th>Course Type</th>
+                        <th>Term Code</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in course_info_data %}
+                    <tr>
+                        <td>{{ item.id }}</td>
+                        <td>{{ item.course_code }}</td>
+                        <td>{{ item.course_name }}</td>
+                        <td>{{ item.full_fee }}</td>
+                        <td>{{ item.course_type }}</td>
+                        <td>{{ item.term_code }}</td>  
                     </tr>
                     {% endfor %}
                 </tbody>
